@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-10-10T15:26:36.157Z</updated>
+  <updated>2020-10-15T06:26:15.130Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>已知不等式 1！+2！+3！+...+m！‹n,请编程对用户指定的n值计算并输出满足该不等式的m的整数解</title>
+    <link href="http://example.com/2020/10/15/%E5%B7%B2%E7%9F%A5%E4%B8%8D%E7%AD%89%E5%BC%8F-1%EF%BC%81-2%EF%BC%81-3%EF%BC%81-m%EF%BC%81%E2%80%B9n-%E8%AF%B7%E7%BC%96%E7%A8%8B%E5%AF%B9%E7%94%A8%E6%88%B7%E6%8C%87%E5%AE%9A%E7%9A%84n%E5%80%BC%E8%AE%A1%E7%AE%97%E5%B9%B6%E8%BE%93%E5%87%BA%E6%BB%A1%E8%B6%B3%E8%AF%A5%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84m%E7%9A%84%E6%95%B4%E6%95%B0%E8%A7%A3/"/>
+    <id>http://example.com/2020/10/15/%E5%B7%B2%E7%9F%A5%E4%B8%8D%E7%AD%89%E5%BC%8F-1%EF%BC%81-2%EF%BC%81-3%EF%BC%81-m%EF%BC%81%E2%80%B9n-%E8%AF%B7%E7%BC%96%E7%A8%8B%E5%AF%B9%E7%94%A8%E6%88%B7%E6%8C%87%E5%AE%9A%E7%9A%84n%E5%80%BC%E8%AE%A1%E7%AE%97%E5%B9%B6%E8%BE%93%E5%87%BA%E6%BB%A1%E8%B6%B3%E8%AF%A5%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84m%E7%9A%84%E6%95%B4%E6%95%B0%E8%A7%A3/</id>
+    <published>2020-10-15T06:23:44.000Z</published>
+    <updated>2020-10-15T06:26:15.130Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">int</span> n,arr[<span class="number">100</span>],a,sum=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%ld&quot;</span>,&amp;n);</span><br><span class="line">arr[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line"><span class="comment">//计算每一项阶乘  存入数组</span></span><br><span class="line"><span class="keyword">for</span> (a = <span class="number">2</span>; a &lt; <span class="number">100</span>; a++) &#123;</span><br><span class="line">arr[a]=arr[a<span class="number">-1</span>]*a;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//循环遍历 存入的阶乘的数组 计算阶乘的和 与输入的n作比较</span></span><br><span class="line"><span class="keyword">for</span>(a=<span class="number">1</span>;a&lt;<span class="number">100</span>;a++)&#123;</span><br><span class="line">sum+=arr[a];</span><br><span class="line"><span class="keyword">if</span>(sum&gt;=n)&#123;<span class="comment">//如果sun&gt;n的话 说明数组的前一项一定小于n</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;m&lt;=%ld&quot;</span>,a<span class="number">-1</span>);</span><br><span class="line"><span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;li</summary>
+      
+    
+    
+    
+    
+    <category term="C" scheme="http://example.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>杨治原的个人博客</title>
