@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-10-15T06:26:15.130Z</updated>
+  <updated>2020-10-27T12:13:59.865Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>输入一个正整数n,逆序输出n的各位数字，用空格隔开，例如，输入2356，输出6 5 3 2</title>
+    <link href="http://example.com/2020/10/27/%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B4%E6%95%B0n-%E9%80%86%E5%BA%8F%E8%BE%93%E5%87%BAn%E7%9A%84%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97%EF%BC%8C%E7%94%A8%E7%A9%BA%E6%A0%BC%E9%9A%94%E5%BC%80%EF%BC%8C%E4%BE%8B%E5%A6%82%EF%BC%8C%E8%BE%93%E5%85%A52356%EF%BC%8C%E8%BE%93%E5%87%BA6-5-3-2/"/>
+    <id>http://example.com/2020/10/27/%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B4%E6%95%B0n-%E9%80%86%E5%BA%8F%E8%BE%93%E5%87%BAn%E7%9A%84%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97%EF%BC%8C%E7%94%A8%E7%A9%BA%E6%A0%BC%E9%9A%94%E5%BC%80%EF%BC%8C%E4%BE%8B%E5%A6%82%EF%BC%8C%E8%BE%93%E5%85%A52356%EF%BC%8C%E8%BE%93%E5%87%BA6-5-3-2/</id>
+    <published>2020-10-27T12:12:00.000Z</published>
+    <updated>2020-10-27T12:13:59.865Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span>  <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,m,base=<span class="number">1</span>,t;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line">    m=n;</span><br><span class="line">    <span class="keyword">while</span>(m&gt;<span class="number">9</span>)&#123;</span><br><span class="line">        m/=<span class="number">10</span>;</span><br><span class="line">        base*=<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(base&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        t=n/base;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>,t);</span><br><span class="line">        n%=base;</span><br><span class="line">        base/=<span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight c&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;li</summary>
+      
+    
+    
+    
+    
+    <category term="C" scheme="http://example.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>已知不等式 1！+2！+3！+...+m！‹n,请编程对用户指定的n值计算并输出满足该不等式的m的整数解</title>
@@ -57,29 +79,6 @@
     
     
     <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小伙伴</title>
-    <link href="http://example.com/2020/10/08/%E5%B0%8F%E4%BC%99%E4%BC%B4/"/>
-    <id>http://example.com/2020/10/08/%E5%B0%8F%E4%BC%99%E4%BC%B4/</id>
-    <published>2020-10-08T14:02:37.000Z</published>
-    <updated>2020-10-12T13:08:41.404Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="320的小伙伴你们好"><a href="#320的小伙伴你们好" class="headerlink" title="320的小伙伴你们好"></a>320的小伙伴你们好</h2><hr><ul><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li><li><p>嘀 嘀嘀 320的小伙伴你们好</p></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;320的小伙伴你们好&quot;&gt;&lt;a href=&quot;#320的小伙伴你们好&quot; class=&quot;headerlink&quot; title=&quot;320的小伙伴你们好&quot;&gt;&lt;/a&gt;320的小伙伴你们好&lt;/h2&gt;&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;嘀 嘀嘀 320的小伙伴你们好&lt;/p&gt;
-&lt;/li</summary>
-      
-    
-    
-    
     
   </entry>
   
