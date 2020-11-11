@@ -159,7 +159,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -244,7 +244,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -296,6 +296,115 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/11/%E5%B0%8F%E6%B1%BD%E8%BD%A6%E7%9A%84%E4%BD%8D%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/clown.png">
+      <meta itemprop="name" content="clown">
+      <meta itemprop="description" content="Save your heart for someone who cares.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="clown">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/11/%E5%B0%8F%E6%B1%BD%E8%BD%A6%E7%9A%84%E4%BD%8D%E7%BD%AE/" class="post-title-link" itemprop="url">小汽车的位置</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2020-11-11 14:52:01 / 修改时间：14:59:12" itemprop="dateCreated datePublished" datetime="2020-11-11T14:52:01+08:00">2020-11-11</time>
+    </span>
+
+  
+    <span id="/2020/11/11/%E5%B0%8F%E6%B1%BD%E8%BD%A6%E7%9A%84%E4%BD%8D%E7%BD%AE/" class="post-meta-item leancloud_visitors" data-flag-title="小汽车的位置" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/11/11/%E5%B0%8F%E6%B1%BD%E8%BD%A6%E7%9A%84%E4%BD%8D%E7%BD%AE/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/11/%E5%B0%8F%E6%B1%BD%E8%BD%A6%E7%9A%84%E4%BD%8D%E7%BD%AE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>有一辆智能小车，最初（时间为0)的位置为(0,0)，我们想知道它最后的位置。小车以每小时10公里的速度向北移动（以北为y轴正向，以东为x轴正向）。小车会受到一系列依照时间戳记排序的命令，1表示“向左转”，2表示“向右转”，3表“停止”。每个命令的前面有一个时间戳记，所以我们知道该命令是何时发出的。最后一个命令一定是“停止”。我们另外假设，这辆小车非常灵活，它可以在瞬间转弯。<br>以下列输入为例。小车在时间为5的时候收到一个“向左转”的命令1，在时间10收到一个“向右转”的命令2，在时间15收到一个“停止”的命令3。那么在最后时间15的时候，小车的位置将在（-50,100）。程序只要求输出小车最后的位置，第一个整数是x坐标，第二个整数是y坐标。</p>
+<p>输入包含多个命令，每个命令由整数time和command组成，表示在时刻time发出命令command。command的取值范围1-3，含义如上所述。</p>
+<p>输出占一行，包含两个整数，表示小车的最终位置。两个整数之间由空格隔开。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">1</span> </span><br><span class="line"><span class="number">10</span> </span><br><span class="line"><span class="number">2</span> </span><br><span class="line"><span class="number">15</span> </span><br><span class="line"><span class="number">3</span></span><br><span class="line">样例输出 Copy</span><br><span class="line"><span class="number">-50</span> <span class="number">100</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>提示</strong></p>
+<p>（1）数字化。可为四个方向编号，自向北开始，逆时针将4个方向依次编号为0,1,2,3。当接到向左转命令，方向号增1，向右转则方向号减1。为避免出现负数或大于3的情况，可对4取模。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">0</span>,y=<span class="number">0</span>;<span class="comment">//记录小汽车的位置</span></span><br><span class="line">	<span class="keyword">int</span> command;<span class="comment">//存储命令号</span></span><br><span class="line">	<span class="keyword">int</span> preTime=<span class="number">0</span>,curTime;<span class="comment">//存储上次发布命令时间和现在命令时间</span></span><br><span class="line">	<span class="keyword">int</span> direction=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;curTime,&amp;command))&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">switch</span>(direction)&#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">		y+=<span class="number">10</span>*(curTime-preTime);<span class="keyword">break</span>; <span class="comment">//(0,50)</span></span><br><span class="line">	<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">		x-=<span class="number">10</span>*(curTime-preTime);<span class="keyword">break</span>;<span class="comment">//(-50,50)十秒时  十五秒时 (-50,100)</span></span><br><span class="line">	<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">		y-=<span class="number">10</span>*(curTime-preTime);<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">		x+=<span class="number">10</span>*(curTime-preTime);<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(command==<span class="number">3</span>)&#123;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(command==<span class="number">1</span>)&#123;<span class="comment">//向左转方向加一</span></span><br><span class="line">		direction++;<span class="comment">//5秒时方向为1 向左</span></span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(command==<span class="number">2</span>)&#123;<span class="comment">//向右转方向减一</span></span><br><span class="line">		direction--; <span class="comment">//十秒时方向为0</span></span><br><span class="line">	&#125;</span><br><span class="line">	direction=(direction+<span class="number">4</span>)%<span class="number">4</span>;<span class="comment">//对四取余 保证方向在0-3之间</span></span><br><span class="line">	preTime=curTime;<span class="comment">//将当前时间转变为上一次时间</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>,x,y);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/27/%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B4%E6%95%B0n-%E9%80%86%E5%BA%8F%E8%BE%93%E5%87%BAn%E7%9A%84%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97%EF%BC%8C%E7%94%A8%E7%A9%BA%E6%A0%BC%E9%9A%94%E5%BC%80%EF%BC%8C%E4%BE%8B%E5%A6%82%EF%BC%8C%E8%BE%93%E5%85%A52356%EF%BC%8C%E8%BE%93%E5%87%BA6-5-3-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -320,10 +429,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2020-10-27 20:12:00 / 修改时间：20:13:59" itemprop="dateCreated datePublished" datetime="2020-10-27T20:12:00+08:00">2020-10-27</time>
+      <time title="创建时间：2020-10-27 20:12:00" itemprop="dateCreated datePublished" datetime="2020-10-27T20:12:00+08:00">2020-10-27</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-11-11 14:59:06" itemprop="dateModified" datetime="2020-11-11T14:59:06+08:00">2020-11-11</time>
+      </span>
 
   
     <span id="/2020/10/27/%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AA%E6%AD%A3%E6%95%B4%E6%95%B0n-%E9%80%86%E5%BA%8F%E8%BE%93%E5%87%BAn%E7%9A%84%E5%90%84%E4%BD%8D%E6%95%B0%E5%AD%97%EF%BC%8C%E7%94%A8%E7%A9%BA%E6%A0%BC%E9%9A%94%E5%BC%80%EF%BC%8C%E4%BE%8B%E5%A6%82%EF%BC%8C%E8%BE%93%E5%85%A52356%EF%BC%8C%E8%BE%93%E5%87%BA6-5-3-2/" class="post-meta-item leancloud_visitors" data-flag-title="输入一个正整数n,逆序输出n的各位数字，用空格隔开，例如，输入2356，输出6 5 3 2" title="阅读次数">
@@ -422,10 +537,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2020-10-15 14:23:44 / 修改时间：14:26:15" itemprop="dateCreated datePublished" datetime="2020-10-15T14:23:44+08:00">2020-10-15</time>
+      <time title="创建时间：2020-10-15 14:23:44" itemprop="dateCreated datePublished" datetime="2020-10-15T14:23:44+08:00">2020-10-15</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-11-11 14:59:24" itemprop="dateModified" datetime="2020-11-11T14:59:24+08:00">2020-11-11</time>
+      </span>
 
   
     <span id="/2020/10/15/%E5%B7%B2%E7%9F%A5%E4%B8%8D%E7%AD%89%E5%BC%8F-1%EF%BC%81-2%EF%BC%81-3%EF%BC%81-m%EF%BC%81%E2%80%B9n-%E8%AF%B7%E7%BC%96%E7%A8%8B%E5%AF%B9%E7%94%A8%E6%88%B7%E6%8C%87%E5%AE%9A%E7%9A%84n%E5%80%BC%E8%AE%A1%E7%AE%97%E5%B9%B6%E8%BE%93%E5%87%BA%E6%BB%A1%E8%B6%B3%E8%AF%A5%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84m%E7%9A%84%E6%95%B4%E6%95%B0%E8%A7%A3/" class="post-meta-item leancloud_visitors" data-flag-title="已知不等式 1！+2！+3！+...+m！‹n,请编程对用户指定的n值计算并输出满足该不等式的m的整数解" title="阅读次数">
@@ -527,10 +648,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2020-10-10 23:26:00 / 修改时间：23:26:36" itemprop="dateCreated datePublished" datetime="2020-10-10T23:26:00+08:00">2020-10-10</time>
+      <time title="创建时间：2020-10-10 23:26:00" itemprop="dateCreated datePublished" datetime="2020-10-10T23:26:00+08:00">2020-10-10</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-11-11 14:59:17" itemprop="dateModified" datetime="2020-11-11T14:59:17+08:00">2020-11-11</time>
+      </span>
 
   
     <span id="/2020/10/10/%E6%9D%A8%E6%B2%BB%E5%8E%9F%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-meta-item leancloud_visitors" data-flag-title="杨治原的个人博客" title="阅读次数">
@@ -660,13 +787,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">3k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1 分钟</span>
+    <span title="站点阅读时长">2 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
