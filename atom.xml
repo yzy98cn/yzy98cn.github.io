@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-11-24T13:06:05.100Z</updated>
+  <updated>2020-11-24T13:41:50.541Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1093: 验证哥德巴赫猜想(函数专题)</title>
+    <link href="http://example.com/2020/11/24/1093-%E9%AA%8C%E8%AF%81%E5%93%A5%E5%BE%B7%E5%B7%B4%E8%B5%AB%E7%8C%9C%E6%83%B3-%E5%87%BD%E6%95%B0%E4%B8%93%E9%A2%98/"/>
+    <id>http://example.com/2020/11/24/1093-%E9%AA%8C%E8%AF%81%E5%93%A5%E5%BE%B7%E5%B7%B4%E8%B5%AB%E7%8C%9C%E6%83%B3-%E5%87%BD%E6%95%B0%E4%B8%93%E9%A2%98/</id>
+    <published>2020-11-24T13:41:01.000Z</published>
+    <updated>2020-11-24T13:41:50.541Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1093-验证哥德巴赫猜想（函数专题）"><a href="#1093-验证哥德巴赫猜想（函数专题）" class="headerlink" title="1093: 验证哥德巴赫猜想（函数专题）"></a>1093: 验证哥德巴赫猜想（函数专题）</h3><p>哥德巴赫猜想大家都知道一点吧。我们现在不是想证明这个结论，而是对于任给的一个不小于6的偶数，来寻找和等于该偶数的所有素数对。做好了这件实事,就能说明这个猜想是成立的。<br>要求程序定义一个prime()函数和一个main()函数，prime()函数判断一个整数n是否是素数，其余功能在main()函数中实现。<br>int prime(int n)<br>{<br>//判断n是否为素数， 若n为素数，本函数返回1，否则返回0<br>}</p><p><strong>对于C/C++代码的提交，本题要求必须通过定义prime函数和main函数实现，否则，提交编译错误，要提交完整的程序。</strong></p><p>一个偶数M (M是6到1000000之间的一个偶数).</p><p>输出和等于该偶数的所有素数对a和b，按a递增的顺序输出，(a,b)和(b,a)被视为同一个素数对。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">40</span><br><span class="line">输出</span><br><span class="line">3 37</span><br><span class="line">11 29</span><br><span class="line">17 23</span><br></pre></td></tr></table></figure><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">prime</span><span class="params">(<span class="keyword">int</span> n)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> m;</span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;m);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;=m/<span class="number">2</span>;i+=<span class="number">2</span>)&#123;</span><br><span class="line"><span class="keyword">if</span>(prime(i)&amp;&amp;prime(m-i))&#123; <span class="comment">//判断 两者是否都为素数</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>,i,m-i);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//判断素数  除了1和它本身 没有其他除数</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">prime</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> i,k;</span><br><span class="line"><span class="keyword">if</span>(n==<span class="number">1</span>)&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">k=<span class="built_in">sqrt</span>(n);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">2</span>;i&lt;=k;i++)&#123;</span><br><span class="line"><span class="keyword">if</span>(n%i==<span class="number">0</span>)&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1093-验证哥德巴赫猜想（函数专题）&quot;&gt;&lt;a href=&quot;#1093-验证哥德巴赫猜想（函数专题）&quot; class=&quot;headerlink&quot; title=&quot;1093: 验证哥德巴赫猜想（函数专题）&quot;&gt;&lt;/a&gt;1093: 验证哥德巴赫猜想（函数专题）&lt;/h3&gt;&lt;p&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="C" scheme="http://example.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>童年生活二三事（多实例测试）</title>
