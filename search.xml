@@ -42,21 +42,6 @@
       </tags>
   </entry>
   <entry>
-    <title>杨治原的个人博客</title>
-    <url>/2020/10/10/%E6%9D%A8%E6%B2%BB%E5%8E%9F%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h1 id="杨治原的个人博客"><a href="#杨治原的个人博客" class="headerlink" title="杨治原的个人博客"></a>杨治原的个人博客</h1><p>喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static void main(String [] args)&#123;</span><br><span class="line"></span><br><span class="line">	System.out.println(&quot;初次见面请多多关照&quot;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，</p>
-<a id="more"></a>
-
-<p>初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。</p>
-]]></content>
-      <tags>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>空心菱形</title>
     <url>/2020/11/13/%E7%A9%BA%E5%BF%83%E8%8F%B1%E5%BD%A2/</url>
     <content><![CDATA[<h3 id="空心菱形"><a href="#空心菱形" class="headerlink" title="空心菱形"></a>空心菱形</h3><p><strong>题目描述</strong></p>
@@ -72,6 +57,34 @@
 
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,m,t;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">	<span class="keyword">if</span>(i==<span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n-i<span class="number">-1</span>; j++) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;*\n&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n-i<span class="number">-1</span>; j++) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;<span class="number">2</span>*i<span class="number">-1</span>; k++) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">			m=k;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;*\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//打印下面的*</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">	<span class="keyword">if</span>(i==<span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">continue</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;=i<span class="number">-1</span>; j++) &#123;</span><br><span class="line">			t=j;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=m-(<span class="number">2</span>*i<span class="number">-1</span>); k&gt;<span class="number">0</span>;k--) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">		</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(i==(n<span class="number">-1</span>))&#123;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;*\n&quot;</span>);	</span><br><span class="line">	 	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <tags>
+        <tag>C</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>杨治原的个人博客</title>
+    <url>/2020/10/10/%E6%9D%A8%E6%B2%BB%E5%8E%9F%E7%9A%84%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="杨治原的个人博客"><a href="#杨治原的个人博客" class="headerlink" title="杨治原的个人博客"></a>杨治原的个人博客</h1><p>喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">public static void main(String [] args)&#123;</span><br><span class="line"></span><br><span class="line">	System.out.println(&quot;初次见面请多多关照&quot;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，喜欢简约，酷爱小丑，</p>
+<a id="more"></a>
+
+<p>初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。初次见面请多多关照。</p>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>童年生活二三事（多实例测试）</title>
+    <url>/2020/11/24/%E7%AB%A5%E5%B9%B4%E7%94%9F%E6%B4%BB%E4%BA%8C%E4%B8%89%E4%BA%8B(%E5%A4%9A%E5%AE%9E%E4%BE%8B%E6%B5%8B%E8%AF%95)/</url>
+    <content><![CDATA[<h3 id="1091-童年生活二三事（多实例测试）"><a href="#1091-童年生活二三事（多实例测试）" class="headerlink" title="1091: 童年生活二三事（多实例测试）"></a>1091: 童年生活二三事（多实例测试）</h3><p>Redraiment小时候走路喜欢蹦蹦跳跳，他最喜欢在楼梯上跳来跳去。 但年幼的他一次只能走上一阶或者一下子蹦上两阶。 现在一共有N阶台阶，请你计算一下Redraiment从第0阶到第N阶共有几种走法。</p>
+<p>输入包括多组数据。 每组数据包括一行:**N(1≤N≤40)**。 输入以0结束</p>
+<p>对应每个输入包括一个输出。 为redraiment到达第n阶不同走法的数量。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1</span><br><span class="line">3</span><br><span class="line">0</span><br><span class="line">输出</span><br><span class="line">1</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">41</span>];</span><br><span class="line">	<span class="keyword">int</span> i,n;</span><br><span class="line">	a[<span class="number">1</span>]=<span class="number">1</span>;<span class="comment">//第一台阶跳法</span></span><br><span class="line">	a[<span class="number">2</span>]=<span class="number">2</span>;<span class="comment">//第二台阶跳法</span></span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">3</span>;i&lt;=<span class="number">40</span>;i++)&#123;<span class="comment">//从第三台阶开始计算</span></span><br><span class="line">		a[i]=a[i<span class="number">-2</span>]+a[i<span class="number">-1</span>];  <span class="comment">//下一个台阶的跳法等于前两个台阶跳法之和  列举找规律</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n),n!=<span class="number">0</span>)&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,a[n]);<span class="comment">//输出对应台阶的跳法</span></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>C</tag>
       </tags>
