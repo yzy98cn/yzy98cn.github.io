@@ -22,20 +22,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"8.0.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="98b34ada5707ac0fb05fd0cf46bb87d5">
-<meta property="og:type" content="website">
-<meta property="og:title" content="clown">
-<meta property="og:url" content="http://example.com/baidu_verify_code-rD8pskDKtd.html">
+  <meta name="description" content="题目描述 输入三个2 进制的数，要求将这三个二进制数对应的十进制整数按从小到大的顺序输。要求程序定义一个bToD()函数和一个main()函数，bToD() 函数的功能是将二进制数转化为十进制整数，其余功能在main()函数中实现。int bToD(char str[]){&#x2F;&#x2F;函数返回二进制数str对应十进制整数} 输入 输入三个2 进制的数，用空格隔开。所有数据均为非负数，二进制数长度不超过30">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1142二进制数的大小">
+<meta property="og:url" content="http://example.com/2021/03/09/1142%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E7%9A%84%E5%A4%A7%E5%B0%8F/index.html">
 <meta property="og:site_name" content="clown">
-<meta property="og:description" content="98b34ada5707ac0fb05fd0cf46bb87d5">
+<meta property="og:description" content="题目描述 输入三个2 进制的数，要求将这三个二进制数对应的十进制整数按从小到大的顺序输。要求程序定义一个bToD()函数和一个main()函数，bToD() 函数的功能是将二进制数转化为十进制整数，其余功能在main()函数中实现。int bToD(char str[]){&#x2F;&#x2F;函数返回二进制数str对应十进制整数} 输入 输入三个2 进制的数，用空格隔开。所有数据均为非负数，二进制数长度不超过30">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-06T09:09:02.474Z">
-<meta property="article:modified_time" content="2021-03-06T09:09:02.474Z">
+<meta property="article:published_time" content="2021-03-09T06:56:53.000Z">
+<meta property="article:modified_time" content="2021-03-09T07:03:23.533Z">
 <meta property="article:author" content="clown">
+<meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/baidu_verify_code-rD8pskDKtd">
+<link rel="canonical" href="http://example.com/2021/03/09/1142%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E7%9A%84%E5%A4%A7%E5%B0%8F/">
 
 
 <script class="page-configurations">
@@ -43,13 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title> | clown
-</title>
+  <title>1142二进制数的大小 | clown</title>
   
 
 
@@ -162,7 +162,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">12</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">13</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -247,7 +247,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -267,7 +267,7 @@
 <!--增加网易云播放器-->
 
 	<div id="music163player">
-    	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86 src="//music.163.com/outchain/player?type=2&id=487885426&auto=1&height=66"></iframe>
+    	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=86 src="//music.163.com/outchain/player?type=2&id=1806336043&auto=0&height=66"></iframe>
 	</div>
         <div class="back-to-top animated">
           <i class="fa fa-arrow-up"></i>
@@ -287,44 +287,145 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
       
-  
-  
 
       
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/09/1142%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E7%9A%84%E5%A4%A7%E5%B0%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/clown.png">
+      <meta itemprop="name" content="clown">
+      <meta itemprop="description" content="Save your heart for someone who cares.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="clown">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          1142二进制数的大小
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">
-</h1>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
 
-<div class="post-meta-container">
+      <time title="创建时间：2021-03-09 14:56:53 / 修改时间：15:03:23" itemprop="dateCreated datePublished" datetime="2021-03-09T14:56:53+08:00">2021-03-09</time>
+    </span>
+
   
-
+    <span id="/2021/03/09/1142%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E7%9A%84%E5%A4%A7%E5%B0%8F/" class="post-meta-item leancloud_visitors" data-flag-title="1142二进制数的大小" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/03/09/1142%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E7%9A%84%E5%A4%A7%E5%B0%8F/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/09/1142%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E7%9A%84%E5%A4%A7%E5%B0%8F/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>826</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      
-      <div class="post-body">
-          98b34ada5707ac0fb05fd0cf46bb87d5
-      </div>
-      
-      
-      
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>题目描述</p>
+<p>输入三个2 进制的数，要求将这三个二进制数对应的十进制整数按从小到大的顺序输。<br>要求程序定义一个bToD()函数和一个main()函数，bToD() 函数的功能是将二进制数转化为十进制整数，其余功能在main()函数中实现。<br>int bToD(char str[])<br>{<br>//函数返回二进制数str对应十进制整数<br>}</p>
+<p>输入</p>
+<p>输入三个2 进制的数，用空格隔开。所有数据均为非负数，二进制数长度不超过30。</p>
+<p>输出</p>
+<p>将对应的十进制整数按从小到大的顺序输出</p>
+<p>样例输入 <a href="javascript:CopyToClipboard($('#sampleinput').text())">Copy</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1101  110  1011</span><br></pre></td></tr></table></figure>
+
+<p>样例输出 <a href="javascript:CopyToClipboard($('#sampleoutput').text())">Copy</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">6 11 13</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&quot;stdio.h&quot;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bToD</span><span class="params">(<span class="keyword">char</span> str[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> x=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;str[i]!=<span class="string">&#x27;\0&#x27;</span>;i++)&#123; </span><br><span class="line">        x= x*<span class="number">2</span>+(str[i]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span>  x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> str[<span class="number">3</span>];</span><br><span class="line">    <span class="keyword">char</span> a[<span class="number">35</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">3</span>;i++)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>,a);</span><br><span class="line">        str[i]=bToD(a);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt; <span class="number">3</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(str[i]&gt;str[j])&#123;</span><br><span class="line">                <span class="keyword">int</span> t=str[i];</span><br><span class="line">                str[i]=str[j];</span><br><span class="line">                str[j]=t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span>(i==<span class="number">0</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,str[i]);c</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot; %d&quot;</span>,str[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
     </div>
-    
 
     
     
     
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"># C</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/06/L1-7-%E5%89%8D%E4%B8%96%E6%A1%A3%E6%A1%88-20-%E5%88%86/" rel="prev" title="L1-7 前世档案 (20 分)">
+                  <i class="fa fa-chevron-left"></i> L1-7 前世档案 (20 分)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
       
@@ -375,13 +476,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">10k</span>
+    <span title="站点总字数">11k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">9 分钟</span>
+    <span title="站点阅读时长">10 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
@@ -536,7 +637,7 @@ NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     new Valine(Object.assign({"enable":true,"appId":"vLEgpCn7spqkfk1FhzbvuRUO-gzGzoHsz","appKey":"Rs3dfH5UsTaKvyBjTBJogAIq","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":false,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
       el: '#valine-comments',
-      path: "/baidu_verify_code-rD8pskDKtd.html",
+      path: "/2021/03/09/1142%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E7%9A%84%E5%A4%A7%E5%B0%8F/",
       serverURLs: "https://vlegpcn7.api.lncldglobal.com"
     }));
   }, window.Valine);
