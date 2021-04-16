@@ -149,7 +149,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">2</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">3</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -159,7 +159,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">13</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">15</span></a>
 
   </li>
         <li class="menu-item menu-item-schedule">
@@ -244,14 +244,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">15</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -288,6 +288,214 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/16/%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/clown.png">
+      <meta itemprop="name" content="clown">
+      <meta itemprop="description" content="Save your heart for someone who cares.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="clown">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/16/%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">循环队列操作</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-16 19:32:55 / 修改时间：19:36:59" itemprop="dateCreated datePublished" datetime="2021-04-16T19:32:55+08:00">2021-04-16</time>
+    </span>
+
+  
+    <span id="/2021/04/16/%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97%E6%93%8D%E4%BD%9C/" class="post-meta-item leancloud_visitors" data-flag-title="循环队列操作" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/04/16/%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97%E6%93%8D%E4%BD%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/16/%E5%BE%AA%E7%8E%AF%E9%98%9F%E5%88%97%E6%93%8D%E4%BD%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="循环队列操作"><a href="#循环队列操作" class="headerlink" title="循环队列操作"></a>循环队列操作</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 3    <span class="comment">//循环队列初始化时分配的存储空间长度</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> *base;   <span class="comment">//存储空间基址，队列中存储的元素是字符</span></span><br><span class="line">	<span class="keyword">int</span> front;    <span class="comment">//队头指针</span></span><br><span class="line">	<span class="keyword">int</span> rear;   <span class="comment">//队尾指针</span></span><br><span class="line">&#125;SqQueue;       <span class="comment">//循环队列结构</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化循环队列Q</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitQueue</span><span class="params">(SqQueue &amp;Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Q.base  =(<span class="keyword">char</span> *)<span class="built_in">malloc</span>(MAXSIZE*<span class="keyword">sizeof</span>(<span class="keyword">char</span>));   <span class="comment">//为Q分配存储空间,也可以使用下面注释掉的语句</span></span><br><span class="line">	<span class="comment">//Q.base =new char[MAXSIZE];</span></span><br><span class="line">	<span class="keyword">if</span>(!Q.base ) <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">	Q.front =Q.rear =<span class="number">0</span>;        <span class="comment">//空队时，front和rear均为0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//入队操作，向循环队列Q的队尾插入新元素e，插入成功，返回true,插入失败，返回false</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">EnQueue</span><span class="params">(SqQueue &amp;Q, <span class="keyword">char</span> e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//请同学们在此处把该操作补充完整，并调试</span></span><br><span class="line">	<span class="keyword">if</span>((Q.rear+<span class="number">1</span>)%MAXSIZE == Q.front)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	Q.base[Q.rear]=e;</span><br><span class="line">	Q.rear=(Q.rear+<span class="number">1</span>)%MAXSIZE;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//出队操作，删除循环队列Q的队头元素，被删元素用参数e返回，删除成功，函数返回true,删除失败，函数返回false</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">DeQueue</span><span class="params">(SqQueue &amp;Q,<span class="keyword">char</span> &amp;e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//请同学们在此处把该操作补充完整，并调试</span></span><br><span class="line">	<span class="keyword">if</span>(Q.front == Q.rear)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	e = Q.base[Q.front];</span><br><span class="line">	Q.front=(Q.front + <span class="number">1</span>)%MAXSIZE;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//取循环队列Q的队头元素，用参数e返回取得的队头元素</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">GetHead</span><span class="params">(SqQueue Q,<span class="keyword">char</span> &amp;e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//请同学们在此处把该操作补充完整，并调试</span></span><br><span class="line">	<span class="keyword">if</span>(Q.front!=Q.rear)&#123;		</span><br><span class="line">		e = Q.base[Q.front];</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//取循环队列Q的队尾元素，用参数e返回取得的队尾元素</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">GetTail</span><span class="params">(SqQueue Q,<span class="keyword">char</span> &amp;e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//请同学们在此处把该操作补充完整，并调试</span></span><br><span class="line">	<span class="keyword">if</span>(Q.front!=Q.rear)&#123;		</span><br><span class="line">		e = Q.base[Q.rear<span class="number">-1</span>];</span><br><span class="line">	&#125; </span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//输出循环队列Q中的元素（从队头到队尾的顺序输出）</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintQueue</span><span class="params">(SqQueue Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">if</span>(Q.front &lt;=Q.rear )   <span class="comment">//若front&lt;=rear,则队列元素在下标front~rear-1范围内</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(i=Q.front ;i&lt;Q.rear ;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;Q.base [i]&lt;&lt;<span class="string">&quot;  &quot;</span>;   <span class="comment">//元素之间用两个空格分隔</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span>   <span class="comment">//若front&gt;rear,则队列元素在下标front~MAXSIZE-1和0~rear-1范围内</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(i=Q.front ;i&lt;MAXSIZE;i++)</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;Q.base [i]&lt;&lt;<span class="string">&quot;  &quot;</span>;</span><br><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;Q.rear ;i++)</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;Q.base [i]&lt;&lt;<span class="string">&quot;  &quot;</span>;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//求循环队列Q的长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">QueueLength</span><span class="params">(SqQueue Q)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> (Q.rear-Q.front+MAXSIZE)%MAXSIZE;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//操作菜单</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">showmenu</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;*****************************************************************&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;1、入队          2、出队         3、输出队列元素&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;4、取队头元素    5、取队尾元素   6、退出&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	SqQueue Q;       <span class="comment">//定义循环队列Q</span></span><br><span class="line">	<span class="keyword">int</span> k; </span><br><span class="line">	<span class="keyword">char</span> e;</span><br><span class="line">	<span class="keyword">bool</span> flag;</span><br><span class="line">	InitQueue(Q);    <span class="comment">//初始化循环队列Q</span></span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;循环队列Q初始化成功&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//循环显示菜单，完成循环队列的一系列操作</span></span><br><span class="line">	<span class="keyword">do</span>&#123;</span><br><span class="line">		showmenu();    </span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;请选择要执行的操作序号&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;k;    <span class="comment">//k表示用户选择的操作序号</span></span><br><span class="line">		<span class="keyword">switch</span>(k)</span><br><span class="line">		&#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:    <span class="comment">//执行入队操作</span></span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;请输入入队元素的值&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;e;      <span class="comment">//输入要插入到队尾处的值</span></span><br><span class="line">			flag=EnQueue(Q,e);   <span class="comment">//执行入队操作，,flag表示入栈操作结果，或为true,或为false</span></span><br><span class="line">			<span class="keyword">if</span>(flag)       <span class="comment">//若入队操作成功</span></span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;入队操作成功&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;队列已满，入队操作失败！&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:   <span class="comment">//执行出队操作</span></span><br><span class="line">			flag=DeQueue(Q,e);     <span class="comment">//执行出队操作，被删队头元素的值用e返回，flag表示出栈操作结果，或为true,或为false</span></span><br><span class="line">			<span class="keyword">if</span>(flag)       <span class="comment">//若出队操作成功</span></span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;出队操作成功，被删队头元素为：&quot;</span>&lt;&lt;e&lt;&lt;<span class="built_in">endl</span>;  <span class="comment">//输出被删队头元素的值</span></span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;队列已空，不能执行出队操作！&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">3</span>:   <span class="comment">//输出队列的长度及队列中的元素</span></span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;当前队列长度为：&quot;</span>&lt;&lt;QueueLength(Q)&lt;&lt;<span class="string">&quot;,队中元素为（从队头到队尾方向）：&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			PrintQueue(Q);      <span class="comment">//输出循环队列Q中的元素</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">case</span> <span class="number">4</span>:    <span class="comment">//输出队头元素</span></span><br><span class="line">			<span class="keyword">if</span>(GetHead(Q,e))</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;队头元素为：&quot;</span>&lt;&lt;e&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;当前队列为空队列，没有队头元素&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">5</span>:   <span class="comment">//输出队尾元素</span></span><br><span class="line">			<span class="keyword">if</span>(GetTail(Q,e))</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;队尾元素为：&quot;</span>&lt;&lt;e&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;当前队列为空队列，没有队尾元素&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;<span class="comment">//switch</span></span><br><span class="line"></span><br><span class="line">	&#125;<span class="keyword">while</span>(k&lt;<span class="number">6</span>);	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/16/%E9%A1%BA%E5%BA%8F%E6%A0%88%E6%93%8D%E4%BD%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/clown.png">
+      <meta itemprop="name" content="clown">
+      <meta itemprop="description" content="Save your heart for someone who cares.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="clown">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/16/%E9%A1%BA%E5%BA%8F%E6%A0%88%E6%93%8D%E4%BD%9C/" class="post-title-link" itemprop="url">顺序栈操作</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-04-16 19:32:50 / 修改时间：19:34:17" itemprop="dateCreated datePublished" datetime="2021-04-16T19:32:50+08:00">2021-04-16</time>
+    </span>
+
+  
+    <span id="/2021/04/16/%E9%A1%BA%E5%BA%8F%E6%A0%88%E6%93%8D%E4%BD%9C/" class="post-meta-item leancloud_visitors" data-flag-title="顺序栈操作" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/04/16/%E9%A1%BA%E5%BA%8F%E6%A0%88%E6%93%8D%E4%BD%9C/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/04/16/%E9%A1%BA%E5%BA%8F%E6%A0%88%E6%93%8D%E4%BD%9C/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="顺序栈操作"><a href="#顺序栈操作" class="headerlink" title="顺序栈操作"></a>顺序栈操作</h1><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 100    <span class="comment">//顺序栈初始化时分配的存储空间长度</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> *base;   <span class="comment">//栈底指针,栈中元素为字符</span></span><br><span class="line">	<span class="keyword">char</span> *top;    <span class="comment">//栈顶指针</span></span><br><span class="line">	<span class="keyword">int</span> stacksize;   <span class="comment">//栈可用的最大容量</span></span><br><span class="line">&#125;SqStack;       <span class="comment">//顺序栈结构</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化顺序栈S</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitStack</span><span class="params">(SqStack &amp;S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	S.base  =(<span class="keyword">char</span> *)<span class="built_in">malloc</span>(MAXSIZE*<span class="keyword">sizeof</span>(<span class="keyword">char</span>));   <span class="comment">//为S分配存储空间,也可以使用下面注释掉的语句</span></span><br><span class="line">	<span class="comment">//S.base =new char[MAXSIZE];</span></span><br><span class="line">	<span class="keyword">if</span>(!S.base  ) <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">	S.top  =S.base ;        <span class="comment">//空栈时，s.top和s.base均指向栈底</span></span><br><span class="line">	S.stacksize =MAXSIZE;   <span class="comment">//初始化栈的最大容量为MAXSIZE</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//入栈操作，向顺序栈S的栈顶处插入新元素e，插入成功，返回true,插入失败，返回false</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Push</span><span class="params">(SqStack &amp;S, <span class="keyword">char</span> e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//请同学们在此处把该操作补充完整，并调试</span></span><br><span class="line">	<span class="keyword">if</span>(S.top - S.base == S.stacksize)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125; </span><br><span class="line">	*S.top++=e;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//出栈操作，删除顺序栈S的栈顶元素，被删元素用参数e返回，删除成功，函数返回true,删除失败，函数返回false</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">Pop</span><span class="params">(SqStack &amp;S,<span class="keyword">char</span> &amp;e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//请同学们在此处把该操作补充完整，并调试</span></span><br><span class="line">	<span class="keyword">if</span>(S.top ==S.base)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	e=*--S.top;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//取顺序栈S的栈顶元素，用参数e返回取得的栈顶元素</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">GetTop</span><span class="params">(SqStack S,<span class="keyword">char</span> &amp;e)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//请同学们在此处把该操作补充完整，并调试</span></span><br><span class="line">	<span class="keyword">if</span>(S.top!=S.base)&#123;		</span><br><span class="line">	e = *(S.top<span class="number">-1</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125; </span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//求顺序栈S的长度</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">StackLength</span><span class="params">(SqStack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//请同学们在此处把该操作补充完整，并调</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> S.top - S.base;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出顺序栈S中的元素（从栈顶到栈顶的顺序输出）</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PrintStack</span><span class="params">(SqStack S)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> *p;   </span><br><span class="line">	<span class="keyword">for</span>(p=S.base ;p&lt;S.top ;p++)   <span class="comment">//用指针p依次指向栈中的元素，将其输出</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;*p&lt;&lt;<span class="string">&quot;  &quot;</span>;   <span class="comment">//元素之间用两个空格分隔</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//操作菜单</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">showmenu</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;	</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;*****************************************************************&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;1、入栈          2、出栈         3、输出栈中元素&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;4、取栈顶元素    5、退出&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	SqStack S;       <span class="comment">//定义顺序栈变量S</span></span><br><span class="line">	<span class="keyword">int</span> k; </span><br><span class="line">	<span class="keyword">char</span> e;</span><br><span class="line">	<span class="keyword">bool</span> flag;</span><br><span class="line">	InitStack(S);    <span class="comment">//初始化顺序栈S</span></span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;顺序栈S初始化成功&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//循环显示菜单，完成顺序栈的一系列操作</span></span><br><span class="line">	<span class="keyword">do</span>&#123;</span><br><span class="line">		showmenu();    </span><br><span class="line">		<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;请选择要执行的操作序号&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		<span class="built_in">cin</span>&gt;&gt;k;    <span class="comment">//k表示用户选择的操作序号</span></span><br><span class="line">		<span class="keyword">switch</span>(k)</span><br><span class="line">		&#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:    <span class="comment">//执行入栈操作</span></span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;请输入入栈元素的值&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="built_in">cin</span>&gt;&gt;e;      <span class="comment">//输入要插入到栈顶处的值</span></span><br><span class="line">			flag=Push(S,e);   <span class="comment">//执行入栈操作，,flag表示入栈操作结果，或为true,或为false</span></span><br><span class="line">			<span class="keyword">if</span>(flag)       <span class="comment">//若入栈操作成功</span></span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;入栈操作成功&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;栈已满，入栈操作失败！&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:   <span class="comment">//执行出栈操作</span></span><br><span class="line">			flag=Pop(S,e);     <span class="comment">//执行出栈操作，被删栈顶元素的值用e返回，flag表示出栈操作结果，或为true,或为false</span></span><br><span class="line">			<span class="keyword">if</span>(flag)       <span class="comment">//若出栈操作成功</span></span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;出栈操作成功，被删栈顶元素为：&quot;</span>&lt;&lt;e&lt;&lt;<span class="built_in">endl</span>;  <span class="comment">//输出被删栈顶元素的值</span></span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;栈已空，不能执行出栈操作！&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">3</span>:   <span class="comment">//输出顺序栈的长度及栈中的元素</span></span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;当前栈的长度为：&quot;</span>&lt;&lt;StackLength(S)&lt;&lt;<span class="string">&quot;,栈中元素为（从栈底到栈顶方向）：&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			PrintStack(S);      <span class="comment">//输出循环队列Q中的元素</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">case</span> <span class="number">4</span>:    <span class="comment">//输出栈顶元素</span></span><br><span class="line">			<span class="keyword">if</span>(GetTop(S,e))</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;栈顶元素为：&quot;</span>&lt;&lt;e&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;栈已空，没有栈顶元素&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		</span><br><span class="line">		&#125;<span class="comment">//switch</span></span><br><span class="line"></span><br><span class="line">	&#125;<span class="keyword">while</span>(k&lt;<span class="number">5</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -1180,229 +1388,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/13/%E7%A9%BA%E5%BF%83%E8%8F%B1%E5%BD%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/clown.png">
-      <meta itemprop="name" content="clown">
-      <meta itemprop="description" content="Save your heart for someone who cares.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="clown">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/13/%E7%A9%BA%E5%BF%83%E8%8F%B1%E5%BD%A2/" class="post-title-link" itemprop="url">空心菱形</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2020-11-13 20:02:38 / 修改时间：20:03:36" itemprop="dateCreated datePublished" datetime="2020-11-13T20:02:38+08:00">2020-11-13</time>
-    </span>
-
-  
-    <span id="/2020/11/13/%E7%A9%BA%E5%BF%83%E8%8F%B1%E5%BD%A2/" class="post-meta-item leancloud_visitors" data-flag-title="空心菱形" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/11/13/%E7%A9%BA%E5%BF%83%E8%8F%B1%E5%BD%A2/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/13/%E7%A9%BA%E5%BF%83%E8%8F%B1%E5%BD%A2/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>906</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="空心菱形"><a href="#空心菱形" class="headerlink" title="空心菱形"></a>空心菱形</h3><p><strong>题目描述</strong></p>
-<p>输入一个整数n，（1&lt;=n&lt;=20）,输出一个空心菱形，其中每个边由n个’*’组成。</p>
-<p><strong>输入</strong></p>
-<p>输入包含一个整数,n（1&lt;=n&lt;=20）</p>
-<p><strong>输出</strong></p>
-<p>输出一个空心菱形，每个边由n个’*’组成</p>
-<p><strong>5</strong></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    *</span><br><span class="line">   * *</span><br><span class="line">  *   *</span><br><span class="line"> *     *</span><br><span class="line">*       *</span><br><span class="line"> *     *</span><br><span class="line">  *   *</span><br><span class="line">   * *</span><br><span class="line">    *</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n,m,t;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">	<span class="keyword">if</span>(i==<span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n-i<span class="number">-1</span>; j++) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;*\n&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;n-i<span class="number">-1</span>; j++) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>; k&lt;<span class="number">2</span>*i<span class="number">-1</span>; k++) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">			m=k;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;*\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//打印下面的*</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;n; i++) &#123;</span><br><span class="line">	<span class="keyword">if</span>(i==<span class="number">0</span>) &#123;</span><br><span class="line">		<span class="keyword">continue</span>;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>; j&lt;=i<span class="number">-1</span>; j++) &#123;</span><br><span class="line">			t=j;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;*&quot;</span>);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> k=m-(<span class="number">2</span>*i<span class="number">-1</span>); k&gt;<span class="number">0</span>;k--) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot; &quot;</span>);</span><br><span class="line">		</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(i==(n<span class="number">-1</span>))&#123;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;*\n&quot;</span>);	</span><br><span class="line">	 	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/11/%E5%B0%8F%E6%B1%BD%E8%BD%A6%E7%9A%84%E4%BD%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/clown.png">
-      <meta itemprop="name" content="clown">
-      <meta itemprop="description" content="Save your heart for someone who cares.">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="clown">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/11/%E5%B0%8F%E6%B1%BD%E8%BD%A6%E7%9A%84%E4%BD%8D%E7%BD%AE/" class="post-title-link" itemprop="url">小汽车的位置</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2020-11-11 14:52:01 / 修改时间：14:59:12" itemprop="dateCreated datePublished" datetime="2020-11-11T14:52:01+08:00">2020-11-11</time>
-    </span>
-
-  
-    <span id="/2020/11/11/%E5%B0%8F%E6%B1%BD%E8%BD%A6%E7%9A%84%E4%BD%8D%E7%BD%AE/" class="post-meta-item leancloud_visitors" data-flag-title="小汽车的位置" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/11/11/%E5%B0%8F%E6%B1%BD%E8%BD%A6%E7%9A%84%E4%BD%8D%E7%BD%AE/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/11/%E5%B0%8F%E6%B1%BD%E8%BD%A6%E7%9A%84%E4%BD%8D%E7%BD%AE/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>有一辆智能小车，最初（时间为0)的位置为(0,0)，我们想知道它最后的位置。小车以每小时10公里的速度向北移动（以北为y轴正向，以东为x轴正向）。小车会受到一系列依照时间戳记排序的命令，1表示“向左转”，2表示“向右转”，3表“停止”。每个命令的前面有一个时间戳记，所以我们知道该命令是何时发出的。最后一个命令一定是“停止”。我们另外假设，这辆小车非常灵活，它可以在瞬间转弯。<br>以下列输入为例。小车在时间为5的时候收到一个“向左转”的命令1，在时间10收到一个“向右转”的命令2，在时间15收到一个“停止”的命令3。那么在最后时间15的时候，小车的位置将在（-50,100）。程序只要求输出小车最后的位置，第一个整数是x坐标，第二个整数是y坐标。</p>
-<p>输入包含多个命令，每个命令由整数time和command组成，表示在时刻time发出命令command。command的取值范围1-3，含义如上所述。</p>
-<p>输出占一行，包含两个整数，表示小车的最终位置。两个整数之间由空格隔开。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">1</span> </span><br><span class="line"><span class="number">10</span> </span><br><span class="line"><span class="number">2</span> </span><br><span class="line"><span class="number">15</span> </span><br><span class="line"><span class="number">3</span></span><br><span class="line">样例输出 Copy</span><br><span class="line"><span class="number">-50</span> <span class="number">100</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>提示</strong></p>
-<p>（1）数字化。可为四个方向编号，自向北开始，逆时针将4个方向依次编号为0,1,2,3。当接到向左转命令，方向号增1，向右转则方向号减1。为避免出现负数或大于3的情况，可对4取模。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> x=<span class="number">0</span>,y=<span class="number">0</span>;<span class="comment">//记录小汽车的位置</span></span><br><span class="line">	<span class="keyword">int</span> command;<span class="comment">//存储命令号</span></span><br><span class="line">	<span class="keyword">int</span> preTime=<span class="number">0</span>,curTime;<span class="comment">//存储上次发布命令时间和现在命令时间</span></span><br><span class="line">	<span class="keyword">int</span> direction=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;curTime,&amp;command))&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">switch</span>(direction)&#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">0</span>:</span><br><span class="line">		y+=<span class="number">10</span>*(curTime-preTime);<span class="keyword">break</span>; <span class="comment">//(0,50)</span></span><br><span class="line">	<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">		x-=<span class="number">10</span>*(curTime-preTime);<span class="keyword">break</span>;<span class="comment">//(-50,50)十秒时  十五秒时 (-50,100)</span></span><br><span class="line">	<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">		y-=<span class="number">10</span>*(curTime-preTime);<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">		x+=<span class="number">10</span>*(curTime-preTime);<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(command==<span class="number">3</span>)&#123;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(command==<span class="number">1</span>)&#123;<span class="comment">//向左转方向加一</span></span><br><span class="line">		direction++;<span class="comment">//5秒时方向为1 向左</span></span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(command==<span class="number">2</span>)&#123;<span class="comment">//向右转方向减一</span></span><br><span class="line">		direction--; <span class="comment">//十秒时方向为0</span></span><br><span class="line">	&#125;</span><br><span class="line">	direction=(direction+<span class="number">4</span>)%<span class="number">4</span>;<span class="comment">//对四取余 保证方向在0-3之间</span></span><br><span class="line">	preTime=curTime;<span class="comment">//将当前时间转变为上一次时间</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d %d\n&quot;</span>,x,y);</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
 
   
   <nav class="pagination">
@@ -1458,13 +1443,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">11k</span>
+    <span title="站点总字数">18k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">10 分钟</span>
+    <span title="站点阅读时长">16 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">
